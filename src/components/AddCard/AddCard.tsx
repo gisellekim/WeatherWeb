@@ -34,19 +34,17 @@ export const AddCard = ({
     setNewCityName(newCityName)
   }
 
-  const defaultInput = () => {
-    return (
-      <AutocompleteInput
-        errorMsg={inputErrorMsg}
-        setErrorMsg={setInputErrorMsg}
-        onChange={handleInputValueChange}
-      />
-    )
-  }
+  const defaultInput = (
+    <AutocompleteInput
+      errorMsg={inputErrorMsg}
+      setErrorMsg={setInputErrorMsg}
+      onChange={handleInputValueChange}
+    />
+  )
 
   return (
     <Card sx={{ minWidth: "50%", p: "1.5rem", m: "1rem" }}>
-      {creatingCity && (
+      {creatingCity !== null && (
         <CardActions sx={{ justifyContent: "flex-end" }}>
           <Button sx={{ minWidth: "32px" }} size="small">
             <CheckIcon
@@ -66,8 +64,8 @@ export const AddCard = ({
         </CardActions>
       )}
       <CardActions sx={{ display: "flex", justifyContent: "center" }}>
-        {creatingCity ? (
-          defaultInput()
+        {creatingCity !== null ? (
+          defaultInput
         ) : (
           <Button size="large">
             <AddIcon

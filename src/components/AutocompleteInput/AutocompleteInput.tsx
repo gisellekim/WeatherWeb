@@ -17,7 +17,6 @@ export const AutocompleteInput = ({
 }: AutocompleteInputProps) => {
   const [options, setOptions] = useState<CityOptions>([])
   const [newValue, setNewValue] = useState<string | null>(null)
-  //   const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
   const onInputChange = (value: string) => {
     setErrorMsg(null)

@@ -54,11 +54,11 @@ export const CityList = () => {
     if (
       newCityData!.name.toLowerCase() === filteredNewCityName!.toLowerCase()
     ) {
-      if (editingCity) {
+      if (editingCity !== null) {
         updateCity(newCityData!)
         setEditingCity(null)
       }
-      if (creatingCity) {
+      if (creatingCity !== null) {
         createCity(newCityData!)
         setCreatingCity(null)
       }
@@ -92,7 +92,7 @@ export const CityList = () => {
   }
 
   const handleClickClose = (cityId: number) => {
-    if (creatingCity) {
+    if (creatingCity !== null) {
       setCreatingCity(null)
     } else {
       deleteCity(cityId)
