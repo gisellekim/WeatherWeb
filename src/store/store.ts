@@ -1,8 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit/react"
 import { State, City, Forecast } from "../types/types"
 
-const cities: string[] = ["Seoul", "Los Angeles", "Toronto", "London"]
-
 const createForecast = (): Forecast => {
   return {
     date: null,
@@ -15,6 +13,13 @@ const createForecast = (): Forecast => {
       code: null,
     },
   }
+}
+
+let cities: string[] = JSON.parse(localStorage.getItem("cityList") || "null")
+
+if (!cities) {
+  cities = []
+  localStorage.setItem("cityList", JSON.stringify(cities))
 }
 
 const cityData: City[] = cities.map((city: string, index: number) => ({

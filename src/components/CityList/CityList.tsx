@@ -159,6 +159,12 @@ export const CityList = () => {
     fetchCityWeather()
   }, [])
 
+  useEffect(() => {
+    localStorage.setItem(
+      "cityList",
+      JSON.stringify(cityList.map((city: City) => city.name))
+    )
+  }, [cityList])
   const sortedCityList = [...cityList].sort((_a, b) => (b.isFavourite ? 1 : -1))
 
   return (
