@@ -159,7 +159,7 @@ export const CityList = () => {
     fetchCityWeather()
   }, [])
 
-  const sortedCityList = [...cityList].sort((a, b) => (b.isFavourite ? 1 : -1))
+  const sortedCityList = [...cityList].sort((_a, b) => (b.isFavourite ? 1 : -1))
 
   return (
     <Box sx={{ maxWidth: "680px", m: "0 auto" }}>

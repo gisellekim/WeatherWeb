@@ -1,9 +1,9 @@
-import * as React from "react"
 import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
 import Typography from "@mui/material/Typography"
 import { CardActionArea } from "@mui/material"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import HourglassDisabledIcon from "@mui/icons-material/HourglassDisabled"
 import { Forecast } from "../../types/types"
 import icons from "../../assets/icons.json"
@@ -26,11 +26,7 @@ export const IconCard = ({ isCelsius, forecast }: IconCardProps) => {
   if (iconIndex !== -1) {
     const { fa: faIcon, colour } = icons[iconIndex]
     faIconElement = (
-      <FontAwesomeIcon
-        sx={{ margin: "0 auto" }}
-        icon={faIcon}
-        style={{ color: colour }}
-      />
+      <FontAwesomeIcon icon={faIcon as IconProp} style={{ color: colour }} />
     )
   } else {
     faIconElement = <HourglassDisabledIcon color="action" />

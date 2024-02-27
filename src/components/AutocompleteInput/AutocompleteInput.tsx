@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import Autocomplete from "@mui/material/Autocomplete"
-import Textfield from "@mui/material/Textfield"
+import TextField from "@mui/material/TextField"
 import { CityOptions } from "../../types/types"
 
 type AutocompleteInputProps = {
@@ -80,9 +80,9 @@ export const AutocompleteInput = ({
       disableClearable
       options={options.map((option) => `${option.name}, ${option.country}`)}
       sx={{ width: "100%" }}
-      onChange={(e) => onInputChange(e.target.textContent)}
+      onChange={(e: any) => onInputChange(e.target.textContent)}
       renderInput={(params) => (
-        <Textfield
+        <TextField
           error={errorMsg ? true : false}
           {...params}
           helperText={errorMsg}
