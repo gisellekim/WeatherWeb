@@ -95,7 +95,9 @@ export const BasicCard = ({
           <CloseIcon
             color="action"
             onClick={() => {
-              editingCity ? setEditingCity(null) : handleClickClose(city.id)
+              editingCity === city.id
+                ? setEditingCity(null)
+                : handleClickClose(city.id)
             }}
           />
         </Button>
