@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+This is the weather web app. You can create, edit, and delete the city weather data and it will be saved in your local storage.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# The Weather Web App
+<img width="606" alt="image" src="https://github.com/gisellekim/WeatherWeb/assets/69022097/c7cf2842-4b3e-4d8f-8109-4672de835716">
 
-Currently, two official plugins are available:
+https://github.com/gisellekim/WeatherWeb/assets/69022097/51ce3ec2-ba00-4e6b-950b-8cffc3a68a95
+https://github.com/gisellekim/WeatherWeb/assets/69022097/3cb343aa-efc5-48c1-92af-9cdab13d0f89
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Available Scripts
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+In the project directory, you can run:
 
-- Configure the top-level `parserOptions` property like this:
+### `npm start`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+Or you can go to : https://rococo-pudding-7c944e.netlify.app/
