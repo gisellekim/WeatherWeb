@@ -49,7 +49,11 @@ export const AddCard = ({
           <Button sx={{ minWidth: "32px" }} size="small">
             <CheckIcon
               onClick={() => {
-                if (newCityName && newCityName.length > 2 && !inputErrorMsg) {
+                if (
+                  newCityName !== null &&
+                  newCityName.length > 2 &&
+                  inputErrorMsg === null
+                ) {
                   confirmCityName(newCityId, newCityName)
                 }
               }}

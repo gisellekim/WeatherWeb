@@ -29,7 +29,7 @@ export const CityList = () => {
     newCityName: string | null
   ) => {
     setInputError(null)
-    if (!newCityName || newCityName.trim() === "") {
+    if (newCityName === null || newCityName.trim() === "") {
       setInputError("Please enter a new city name.")
       return
     }

@@ -75,7 +75,12 @@ export const BasicCard = ({
           {editingCity === city.id ? (
             <CheckIcon
               onClick={() => {
-                if (newCityName && newCityName.length > 2 && !inputErrorMsg) {
+                if (
+                  localNewCityName !== null &&
+                  localNewCityName.length > 2 &&
+                  inputErrorMsg === null &&
+                  localNewCityName !== city.name
+                ) {
                   confirmCityName(city.id, localNewCityName)
                 }
               }}
